@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: Green;
+            font-size: 80px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .box{
+             border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div class="grid">
+        <div style="grid-column: span 4;"></div>
+        <div class="box">
+            <b>1</b>
+        </div>
+        <div class="box">
+            <b>2</b>
+        </div>
+        <div class="box">
+            <b>3</b>
+        </div>
+        <div class="box" style="background-color: black; color: white;">
+            <b>+</b>
+        </div>
+        <div class="box">
+            <b>4</b>
+        </div>
+        <div class="box">
+            <b>5</b>
+        </div>
+        <div class="box">
+            <b>6</b>
+        </div>
+        <div class="box" style="background-color: black; color: white;">
+            <b>-</b>
+        </div>
+        <div class="box">
+            <b>7</b>
+        </div>
+        <div class="box">
+            <b>8</b>
+        </div>
+        <div class="box">
+            <b>9</b>
+        </div>
+        <div class="box" style="background-color: black; color: white;">
+            <b>*</b>
+        </div>
+        <div class="box" style="background-color: red; color:white;">
+            <b>C</b>
+        </div>
+        <div class="box">
+            <b>0</b>
+        </div>
+        <div class="box" style="background-color: black; color:white;">
+            <b>=</b>
+        </div>
+        <div class="box" style="background-color: black; color: white;">
+            <b>/</b>
+        </div>
+    </div>
+</body>
+</html>
