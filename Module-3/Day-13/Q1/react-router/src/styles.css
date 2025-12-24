@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  gap: 16px;
+  padding: 12px 20px;
+  background-color: #222;
+}
+
+.nav-link {
+  color: #eee;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.todos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.todo-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: #fafafa;
+}
