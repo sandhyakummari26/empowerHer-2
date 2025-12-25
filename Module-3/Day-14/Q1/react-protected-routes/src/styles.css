@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+form > div {
+  margin-bottom: 8px;
+}
+
+button {
+  cursor: pointer;
+}
