@@ -1,0 +1,52 @@
+--creating a student table
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    age INTEGER,
+    course TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+--inserting data
+INSERT INTO students (name, email, age, course) VALUES
+('Aarav Sharma', 'aarav.sharma@gmail.com', 21, 'Computer Science'),
+('Neha Reddy', 'neha.reddy@gmail.com', 20, 'Information Technology'),
+('Rahul Verma', 'rahul.verma@gmail.com', 22, 'Computer Science'),
+('Priya Singh', 'priya.singh@gmail.com', 19, 'Data Science'),
+('Karthik Kumar', 'karthik.kumar@gmail.com', 23, 'Artificial Intelligence'),
+('Ananya Das', 'ananya.das@gmail.com', 21, 'Data Science'),
+('Rohit Mehta', 'rohit.mehta@gmail.com', 18, 'Information Technology');
+
+--Read data
+--1 Fetch all students
+SELECT * FROM students;
+
+--2 Fetch students older than 20
+SELECT * FROM students
+WHERE age > 20;
+
+--3 Fetch only name and emaill
+SELECT name, email FROM students;
+
+--4 Fetch students enrolled in a specific course
+SELECT * FROM students
+WHERE course = 'Data Science';
+
+
+--updating the data
+UPDATE students
+SET age = 22
+WHERE name = 'Neha Reddy';
+
+UPDATE students
+SET course = 'AI & ML'
+WHERE course = 'Computer Science';
+
+
+--Delete data
+DELETE FROM students
+WHERE id = 7;
+
+DELETE FROM students
+WHERE age < 20;
