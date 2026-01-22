@@ -1,4 +1,6 @@
---creating a student table
+-- SQL CRUD Operations using Supabase SQL Editor
+
+-- STEP 1: CREATE TABLE
 CREATE TABLE students (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
@@ -8,7 +10,7 @@ CREATE TABLE students (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
---inserting data
+-- STEP 2: INSERT DATA
 INSERT INTO students (name, email, age, course) VALUES
 ('Aarav Sharma', 'aarav.sharma@gmail.com', 21, 'Computer Science'),
 ('Neha Reddy', 'neha.reddy@gmail.com', 20, 'Information Technology'),
@@ -18,35 +20,16 @@ INSERT INTO students (name, email, age, course) VALUES
 ('Ananya Das', 'ananya.das@gmail.com', 21, 'Data Science'),
 ('Rohit Mehta', 'rohit.mehta@gmail.com', 18, 'Information Technology');
 
---Read data
---1 Fetch all students
+-- STEP 3: READ DATA
 SELECT * FROM students;
-
---2 Fetch students older than 20
-SELECT * FROM students
-WHERE age > 20;
-
---3 Fetch only name and emaill
+SELECT * FROM students WHERE age > 20;
 SELECT name, email FROM students;
+SELECT * FROM students WHERE course = 'Data Science';
 
---4 Fetch students enrolled in a specific course
-SELECT * FROM students
-WHERE course = 'Data Science';
+-- STEP 4: UPDATE DATA
+UPDATE students SET age = 22 WHERE name = 'Neha Reddy';
+UPDATE students SET course = 'AI & ML' WHERE course = 'Computer Science';
 
-
---updating the data
-UPDATE students
-SET age = 22
-WHERE name = 'Neha Reddy';
-
-UPDATE students
-SET course = 'AI & ML'
-WHERE course = 'Computer Science';
-
-
---Delete data
-DELETE FROM students
-WHERE id = 7;
-
-DELETE FROM students
-WHERE age < 20;
+-- STEP 5: DELETE DATA
+DELETE FROM students WHERE id = 7;
+DELETE FROM students WHERE age < 20;
